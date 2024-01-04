@@ -1,0 +1,47 @@
+body {
+    /*background-color: black;*/
+    display: flex;
+    justify-content: center;
+    margin-top: 17%;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu ul {
+    background-color: #696969;
+    display: flex;
+    padding: 0;
+    transition: 3s;
+}
+
+.menu ul li {
+    padding: 30px 35px;
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-family: Arial;
+    color: #151515;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 3s;
+}
+
+.menu ul li:hover {
+    background-color: #151515;
+    transition: 3s;
+}
+
+.menu ul li:hover a {
+    color: #fff;
+    transition: 3s;
+}
+
+.menu ul:hover {
+    box-shadow: 5px 5px 15px #f1f1f1;
+    transition: 3s;
+}

@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+section {
+    padding: 50px;
+}
+
+#timetable {
+    background-color: #e5e5e5;
+    text-align: center;
+   
+}
+
+#timetable table {
+    background-color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+}
+
+#timetable th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#timetable th {
+    background-color: #3f51b5;
+    color: #fff;
+    font-size: 15px;
+}
+
+#events {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+#events table {
+    background-color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+}
+
+#events th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+#events th {
+    background-color: #8A2BE2;
+    color: #fff;
+    font-size: 15px;
+}
