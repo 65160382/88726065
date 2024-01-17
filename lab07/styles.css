@@ -3,12 +3,12 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     margin: 20px;
-    background-color: #f8f8f8;
+    background-color: #E0FFFF;
     }
     h1 {
     color: #333;
     font-size: 24px;
-    background-color: #bbffb2;
+    background-color: #8FBC8F;
     padding: 15px;
     border-radius: 5px;
     color: rgb(0, 0, 0);
@@ -45,7 +45,7 @@ body {
     }
     button {
     padding: 12px 24px;
-    background-color: #ffaced;
+    background-color: #2E8B57;
     color: white;
     border: none;
     border-radius: 8px;
