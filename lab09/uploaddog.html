@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/style.css">
-  
-</head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Upload a Dog</h1>
+      </header>
+      <input
+        type="file"
+        id="fileInput"
+        accept="image/*"
+        onchange="previewImage(event)"
+      />
 
-<body>
-  <div class="container">
-    <header>
-      <h1>Upload a Dog</h1>
-    </header>
-
-    <form id="uploadForm" enctype="multipart/form-data">
-      <label for="fileInput">
-        <button type="button" onclick="chooseFile()">Choose a Dog</button>
-      </label>
-
-      <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="previewImage(event)" />
-
-      <img id="preview" src="#" alt="Preview" style="display: none; width: 100%; border-radius: 8px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);" />
-
-      <div id="uploadResults">
-        <button type="button" onclick="uploadImage()">Upload</button>
-      </div>
-
-      <a href="index.html"><button type="button">Gallery</button></a>
-    </form>
-
+      <img
+        id="preview"
+        src="#"
+        alt="Preview"
+        style="
+          display: none;
+          align-items: center;
+          max-width: 100%;
+          border-radius: 8px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        "
+      />
+      <button onclick="uploadImage()" id="uploadResults">Upload</button>
+      <div id="suc"></div>
+    </div>
     <script>
       function previewImage(event) {
         const input = event.target;
-        const preview = document.getElementById('preview');
+        const preview = document.getElementById("preview");
 
         const file = input.files[0];
         const reader = new FileReader();
 
         reader.onload = function () {
           preview.src = reader.result;
-          preview.style.display = 'block';
-        }
+          preview.style.display = "block";
+        };
 
         if (file) {
           reader.readAsDataURL(file);
         } else {
-          preview.src = '';
-          preview.style.display = 'none';
+          preview.src = "";
+          preview.style.display = "none";
         }
       }
 
       const API_URL = "https://api.thedogapi.com/v1/";
-      const API_KEY = "live_BFAInBUuDoXOMMMGJpvFZblGgva9pUeNa3geLdaVcfsA79URtlDNUTNZFw8YMic0";
+      const API_KEY =
+        "live_fyjsysBuhKUS8CJoWTX8SAYRyAOfY38Y5eIFygseQ9sicgW124GeouXbmQd9loRY";
 
       function uploadImage() {
         const fileInput = document.getElementById("fileInput");
@@ -72,21 +75,20 @@
           })
           .then((data) => {
             console.log(data);
-            document.getElementById("uploadResults").innerHTML =
-              `<br>Image uploaded successfully`;
+            document.getElementById("suc").innerHTML = `<br>
+        Image uploaded successfully`;
             setTimeout(() => {
               window.location.href = "index.html";
-            }, 1000); // Redirect to index.html after 1 second
+            }, 1000);
           })
           .catch((error) => {
             console.log(error);
           });
       }
 
-      function chooseFile() {
-        document.getElementById('fileInput').click();
+      function BackToIndexHtml() {
+        window.location.href = "index.html";
       }
     </script>
   </body>
-
-  </html>
+</html>
